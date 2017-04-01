@@ -1,0 +1,22 @@
+body {
+	font-family: Arial;
+    height: 100%;
+}
+#map {
+     height: 100%;
+     padding: 10px;
+}
+
+.map-box {
+  height: 650px
+}
+
+button {
+  height: 50px;
+  width: 100%;
+  vertical-align: middle
+}
+
+.header {
+  padding: 10px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>South Oak Park, Illinois</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/knockout-3.4.2.js"></script>
+    <script src="js/oauth.js"></script>
+    <script src="js/sha1.js"></script>
+    <script src="js/yelp.js"></script>  
+    <script src="js/script.js"></script>
+
+  </head>
+  <body>
+    <div class="header col-md-12">
+      <h1>South Oak Park, Illinois</h1>
+      <div>Filter: <input class="filter" data-bind="textInput: filterTerm"></div>
+    </div>
+    <div class="col-md-4">
+      <div class="list" data-bind="foreach: filterLocations">
+        <button data-bind="text: title, click: clicked"></button>
+      </div>
+      <div>Location data provided by Yelp</div>
+    </div>
+    <div class="map-box col-md-8">
+      <div id="map"></div>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5J6XtDTIi3W7PqEnk0TajVVW-cSEz1kA&callback=initiate" onerror="errorHandler()"></script>
+    </div>
+
+  </body>
+</html>
